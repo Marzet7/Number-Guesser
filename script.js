@@ -1,8 +1,12 @@
-let correct = Math.floor(Math.random() * 100);
+let correct;
 const msg = document.querySelector("#msg")
 
-document.querySelector("#guess").addEventListener("click", guess)
-document.querySelector("#reset").addEventListener("click", reset)
+const gameScreen = document.querySelector("#game-screen");
+const startScreen = document.querySelector("#start-screen");
+
+document.querySelector("#start").addEventListener("click", start);
+document.querySelector("#guess").addEventListener("click", guess);
+document.querySelector("#reset").addEventListener("click", reset);
 
 function guess() {
     const number = document.querySelector("#number").value
@@ -18,8 +22,18 @@ function guess() {
     ]
 }
 
+
 function reset() {
     correct = Math.floor(Math.random() * 100);
-    msg.innerText = ""
-    number = 0
+    msg.innerText = "";
+    number = 0;
+}
+
+function start() {
+    let diff = document.querySelector("#diff").value
+    correct = Math.floor(Math.random()*diff);
+
+    gameScreen.style = "display: block;";
+    startScreen.style = "display: none;";
+    
 }

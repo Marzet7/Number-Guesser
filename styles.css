@@ -10,8 +10,15 @@ button {
     background-color: rgb(28, 116, 194);
     border-radius: 2px;
     border: gray 1px solid;
+    color: aliceblue;
+}
 
-    
+select {
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(28, 116, 194);
+    border-radius: 2px;
+    border: gray 1px solid;
+    color: aliceblue;
 }
 
 button:hover {
