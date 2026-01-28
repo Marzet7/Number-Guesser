@@ -10,6 +10,8 @@ else {
     history = JSON.parse(window.localStorage.getItem("history"));
 }
 
+loadHistory();
+
 const gameScreen = document.querySelector("#game-screen");
 const startScreen = document.querySelector("#start-screen");
 
@@ -17,7 +19,7 @@ document.querySelector("#start").addEventListener("click", start);
 document.querySelector("#guess").addEventListener("click", guess);
 document.querySelector("#reset").addEventListener("click", reset);
 
-loadHistory();
+
 
 function guess() {
     const number = document.querySelector("#number").value
@@ -33,7 +35,7 @@ function guess() {
     else {
         msg.innerText = "Too low"
     }
-
+    document.querySelector("#number").value = "";
     count++;
 }
 
@@ -42,6 +44,9 @@ function reset() {
     correct = Math.floor(Math.random() * 100);
     msg.innerText = "";
     number = 0;
+
+    gameScreen.style = "display: none;";
+    startScreen.style = "display: block;";
 }
 
 function start() {
@@ -50,6 +55,7 @@ function start() {
 
     gameScreen.style = "display: block;";
     startScreen.style = "display: none;";
+    document.querySelector("#reset").style = "display: none;";
     
 }
 
