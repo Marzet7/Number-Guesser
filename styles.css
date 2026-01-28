@@ -29,7 +29,9 @@ button:hover {
     display: none;
 }
 
-
+#msg {
+    min-height: 16px;
+}
 
 #game-screen {
     display: none;

@@ -11,9 +11,9 @@
     <div id="start-screen">
         <h2>Select difficulty</h2>
         <select id="diff">
-            <option value="50">1-50</option>
+            <option value="1">1-50</option>
             <option value="100">1-100</option>
-            <option value="100">1-1000</option>
+            <option value="1000">1-1000</option>
             <option value="10000">1-10000</option>
         </select>
         <button id="start">Start</button>
@@ -22,13 +22,18 @@
         <div>
         <label for="number">Number:</label>
         <input type="number" id="number">
-        <span id="msg"></span>
+        <p id="msg"></p>
         </div>
-        <span id="msg"></span>
         <button id="guess">Guess!</button>
+        <button id="reset">Reset</button>
+    </div>
+    <div id="history">
+        <table id="history-table">
+            
+        </table>
     </div>
     
-    <button id="reset">Reset</button>
+    
 
 <script src="script.js"></script>
 </body>
